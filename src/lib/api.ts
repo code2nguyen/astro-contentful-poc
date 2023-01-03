@@ -8,9 +8,11 @@ export async function getFoundations() {
   });
 }
 
-export async function getFoundationEntry(entryId: string) {
-  return contentfulClient.getEntries<FoundationEntry>({
-    content_type: "fondation-entries",
-    entryId,
-  });
+export async function getFoundationEntry(slug: string) {
+  return contentfulClient
+    .getEntries<FoundationEntry>({
+      content_type: "fondation-entries",
+      "fields.slug": slug,
+    })
+    .then((response) => (response.items.length > 0 ? response.items[0] : null));
 }

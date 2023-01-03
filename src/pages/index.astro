@@ -6,15 +6,15 @@ import * as Api from "../lib/api";
 const foundations = await Api.getFoundations();
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Foundations.">
   <main>
     <ul role="list" class="link-card-grid">
       {
         foundations.items.map((item) => (
           <Card
-            href={"./foundations/" + item.fields.label}
-            title={item.fields.label}
-            body={item.fields.label}
+            href={"./foundations/" + item.fields.slug}
+            title={item.fields.name}
+            body={item.fields.name}
           />
         ))
       }

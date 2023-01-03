@@ -1,0 +1,28 @@
+---
+import * as Api from "../../lib/api";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const foundations = await Api.getFoundations();
+  const pages = foundations.items.map((item) => ({
+    params: { slug: item.fields.slug },
+    props: {
+      slug: item.fields.slug,
+    },
+  }));
+  return pages;
+}
+export interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const foundationEntry = await Api.getFoundationEntry(slug);
+console.log(foundationEntry);
+---
+
+<Layout title="Foundation Entry">
+  <main>
+    {foundationEntry && <div> {foundationEntry.fields.content}</div>}
+  </main>
+</Layout>

@@ -1,4 +1,7 @@
+import type { RichTextContent, RichTextData } from "contentful";
+
 export interface FoundationEntry {
-  label: string;
-  content: string;
+  name: string;
+  content: RichTextContent;
+  slug: string;
 }

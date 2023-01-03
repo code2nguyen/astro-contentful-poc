@@ -1,4 +1,5 @@
 export interface Foundation {
-  label: string;
+  name: string;
   image: string;
+  slug: string;
 }

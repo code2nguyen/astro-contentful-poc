@@ -1,5 +1,5 @@
 export interface DesignToken {
-  label: string;
+  name: string;
   type: string;
   value: string;
   description: string;
