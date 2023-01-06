@@ -1,7 +1,7 @@
-import type { RichTextContent, RichTextData } from "contentful";
+import type { Document } from "@contentful/rich-text-types";
 
 export interface FoundationEntry {
   name: string;
-  content: RichTextContent;
+  content: Document;
   slug: string;
 }

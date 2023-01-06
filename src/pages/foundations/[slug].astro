@@ -1,6 +1,8 @@
 ---
 import * as Api from "../../lib/api";
 import Layout from "../../layouts/Layout.astro";
+import RichText from "../../components/rich-text.astro";
+import { richTextToHtmlString } from "../../lib/contentful";
 
 export async function getStaticPaths() {
   const foundations = await Api.getFoundations();
@@ -18,11 +20,16 @@ export interface Props {
 
 const { slug } = Astro.props;
 const foundationEntry = await Api.getFoundationEntry(slug);
-console.log(foundationEntry);
+const richTextContent = foundationEntry
+  ? richTextToHtmlString(foundationEntry.fields.content)
+  : "";
 ---
 
+<script>
+  import "../../components/color-token";
+</script>
 <Layout title="Foundation Entry">
   <main>
-    {foundationEntry && <div> {foundationEntry.fields.content}</div>}
+    {foundationEntry && <RichText content={richTextContent} />}
   </main>
 </Layout>

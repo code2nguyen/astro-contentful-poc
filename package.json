@@ -11,7 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.8.0",
-    "contentful": "^9.2.14"
+    "@astrojs/lit": "^1.0.1",
+    "@contentful/rich-text-html-renderer": "^16.0.2",
+    "@webcomponents/template-shadowroot": "^0.1.0",
+    "astro": "^1.9.1",
+    "contentful": "^9.2.14",
+    "lit": "^2.5.0"
   }
 }

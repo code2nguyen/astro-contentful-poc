@@ -12,6 +12,8 @@ export async function getFoundationEntry(slug: string) {
   return contentfulClient
     .getEntries<FoundationEntry>({
       content_type: "fondation-entries",
+      limit: 1,
+      include: 10,
       "fields.slug": slug,
     })
     .then((response) => (response.items.length > 0 ? response.items[0] : null));
