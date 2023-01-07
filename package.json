@@ -7,11 +7,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "build-preview": "astro build --mode=preview",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/lit": "^1.0.1",
+    "@astrojs/node": "^4.0.0",
     "@contentful/rich-text-html-renderer": "^16.0.2",
     "@webcomponents/template-shadowroot": "^0.1.0",
     "astro": "^1.9.1",

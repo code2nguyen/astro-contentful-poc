@@ -6,14 +6,18 @@
 
 1. Create `fds-astro-space`
 
-![fds-astro-space](./assets/Capture%20d%E2%80%99%C3%A9cran%202023-01-02%20%C3%A0%2006.53.36.png)
+![fds-astro-space](./assets/fds-astro-space.png)
 
 2. Create POC content model
 
 - Design Token
-  // IMAGE
+
+![fds-tokens](./assets/fds-tokens.png)
+
 - Foundation Entries
-  // IMAGE
+
+  ![fds-tokens](./assets/foundation-entries.png)
+
 - Foundations
   // IMAGE
 

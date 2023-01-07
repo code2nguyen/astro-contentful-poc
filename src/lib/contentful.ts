@@ -4,7 +4,6 @@ import {
   type Options,
 } from "@contentful/rich-text-html-renderer";
 import { type Document, BLOCKS } from "@contentful/rich-text-types";
-
 export const contentfulClient = contentful.createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
   accessToken: import.meta.env.DEV
